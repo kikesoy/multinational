@@ -1,0 +1,10 @@
+.navbar-dark .navbar-brand {
+  color: $white;
+}
+
+.screen-reader-text {
+  display: none;
+}
+a {
+  @include transition(all 0.3s ease);
+}

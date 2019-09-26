@@ -1,0 +1,25 @@
+.home-banner {
+  margin-bottom: ($spacer * 3);
+  color: $white;
+  a {
+    color: inherit;
+  }
+  &-container {
+    background-attachment: fixed;
+    background-position: 50% 50%;
+  }
+  &-header {
+    padding: ($spacer * 2);
+    text-align: center;
+    @include media-breakpoint-up(md) {
+      width: 50%;
+    }
+    .widget-title {
+      line-height: 1;
+    }
+    .lead {
+      margin-bottom: 0;
+      font-weight: bold;
+    }
+  }
+}

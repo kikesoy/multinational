@@ -1,0 +1,15 @@
+.job-opportunity {
+  &-title {
+    margin-bottom: $spacer;
+  }
+  &-section-title {
+    margin-bottom: $spacer;
+  }
+  &-description {
+    color: red;
+  }
+  &-profile {
+    color: blue;
+    background: $red;
+  }
+}

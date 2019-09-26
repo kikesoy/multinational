@@ -1,0 +1,21 @@
+@mixin border-grad(
+  $grad-height,
+  $grad-margin-bottom,
+  $grad-color-1,
+  $grad-color-2
+) {
+  display: flex;
+  content: "";
+  height: $grad-height;
+  margin-bottom: $grad-margin-bottom;
+  background-image: repeating-linear-gradient(
+    to right,
+    $grad-color-1 0%,
+    $grad-color-2 25%,
+    $grad-color-1 50%
+  );
+}
+
+@mixin center-shadow($shadow-alpha) {
+  box-shadow: 0 0 2rem rgba(0, 0, 0, $shadow-alpha);
+}

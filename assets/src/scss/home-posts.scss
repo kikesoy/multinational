@@ -1,0 +1,57 @@
+.site-main-home {
+  h2,
+  p {
+    text-align: center;
+  }
+}
+.home-posts {
+  .row {
+    justify-content: center;
+  }
+  .post {
+    margin-bottom: ($spacer * 3);
+    @include make-col-ready();
+    @include media-breakpoint-up(lg) {
+      @include make-col(3);
+    }
+
+    &-wrapper {
+      background: $white;
+      display: flex;
+      flex-flow: column;
+      min-height: 100%;
+      text-align: center;
+      @include center-shadow(0.25);
+    }
+    &-header {
+      &-img {
+        width: 100%;
+        height: auto;
+      }
+      &-title {
+        color: $black;
+        line-height: 1;
+        padding: $spacer;
+        margin-bottom: 0;
+      }
+    }
+    &-content {
+      padding: $spacer;
+      flex: auto;
+      p {
+        padding: 0;
+        margin: 0;
+      }
+    }
+    &-footer {
+      padding: ($spacer * 0.5);
+      .btn {
+        @include border-radius(0);
+        display: block;
+        line-height: 1;
+        padding: $spacer;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.products-filter {
+  background: $multinational-red;
+  color: $white;
+  width: 100%;
+  margin: -($spacer * 3) 15px ($spacer * 3) 15px;
+
+  &-options {
+    list-style: none;
+    display: flex;
+    justify-content: start;
+    padding-left: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  &-item {
+    margin-bottom: 0 !important;
+  }
+
+  &-link {
+    display: block;
+    padding: $spacer;
+  }
+  .selected {
+    background-color: $multinational-red-dark;
+  }
+  a {
+    color: inherit;
+  }
+}

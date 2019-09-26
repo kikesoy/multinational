@@ -1,0 +1,8 @@
+# ignore all logs
+**/logs
+
+# ignore node modules
+node_modules/
+
+# ignore annoying mac hidden files :)
+.DS_Store

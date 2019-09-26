@@ -1,0 +1,132 @@
+.home-products {
+  margin-bottom: ($spacer * 3);
+  &-subtitle {
+    color: $white;
+    margin-bottom: ($spacer * 3);
+    line-height: 1;
+  }
+  &-wrapper {
+    background: $multinational-red;
+    padding: ($spacer * 3) ($spacer * 2);
+    text-align: center;
+  }
+}
+.carousel-products {
+  position: relative;
+  &-item {
+    line-height: 1;
+    text-align: center;
+
+    a {
+      color: $white;
+      display: block;
+      padding: $spacer;
+
+      &:hover {
+        background: $multinational-red-dark;
+      }
+    }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: $spacer;
+    }
+  }
+}
+.slick-slider {
+  .slick-list {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .slick-arrow {
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
+    position: absolute;
+    top: 50%;
+    background: transparent;
+    border: none;
+    height: ($spacer * 2);
+    width: 5%;
+    padding: 0;
+    margin-top: -1rem;
+
+    &::after {
+      font-size: 1.5rem;
+      line-height: 1;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      font-family: "Font Awesome 5 Free";
+      color: $white;
+    }
+  }
+  .slick-prev {
+    left: 0;
+
+    &::after {
+      content: "\f053";
+    }
+  }
+  .slick-next {
+    right: 0;
+    &::after {
+      content: "\f054";
+    }
+  }
+  .slick-dots {
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+
+    li {
+      display: inline-block;
+
+      button {
+        font-size: 0;
+        line-height: 0;
+        display: block;
+        width: 24px;
+        height: 24px;
+        padding: 5px;
+        cursor: pointer;
+        color: transparent;
+        border: 0;
+        outline: none;
+        background: transparent;
+        position: relative;
+
+        &::before {
+          font-style: normal;
+          font-weight: normal;
+          font-variant: normal;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          font-family: "Font Awesome 5 Free";
+          color: $white;
+          font-size: 0.35rem;
+          line-height: 24px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 24px;
+          height: 24px;
+          text-align: center;
+          content: "\f111";
+        }
+      }
+      &.slick-active {
+        button {
+          &::before {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

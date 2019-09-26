@@ -1,0 +1,44 @@
+.header-brand {
+  @include make-col-ready();
+  @include make-col(12);
+  display: flex;
+  @include media-breakpoint-up(md) {
+    justify-content: left;
+  }
+  justify-content: space-between;
+
+  .navbar-brand {
+    @include media-breakpoint-up(md) {
+      width: 50%;
+    }
+    @include media-breakpoint-up(lg) {
+      width: 40%;
+    }
+    @include media-breakpoint-up(xl) {
+      width: 30%;
+    }
+
+    width: 80%;
+    margin-bottom: $spacer;
+
+    .navbar-logo {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .navbar-toggler {
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+    display: flex;
+    color: $white;
+    border: 2px solid $white;
+    align-self: center;
+    padding: 0.75rem;
+    border-radius: 50%;
+    &:hover {
+      color: $multinational-red;
+      background-color: $white;
+    }
+  }
+}

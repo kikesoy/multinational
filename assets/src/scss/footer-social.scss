@@ -1,0 +1,36 @@
+.footer-social {
+  @include make-col-ready();
+  @include media-breakpoint-up(lg) {
+    @include make-col(4);
+    text-align: right;
+  }
+  @include media-breakpoint-up(xl) {
+    @include make-col(3);
+    @include make-col-offset(1);
+    text-align: right;
+  }
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  margin-bottom: ($spacer * 1.5);
+
+  .btn-icon {
+    font-size: 1.25rem;
+    padding: 0.3rem;
+    line-height: 24px;
+    color: $multinational-red;
+    background: $white;
+    border: 1px solid $white;
+    @include border-radius(50%);
+
+    i {
+      width: 24px;
+    }
+
+    &:hover {
+      color: $white;
+      background: $multinational-red;
+    }
+  }
+}

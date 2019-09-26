@@ -1,0 +1,83 @@
+.footer-contact {
+  @include make-container();
+  @include gradient-y($gray-200, $gray-600, 0%, 100%);
+
+  .contact-image {
+    display: none;
+    padding: 0;
+    @include media-breakpoint-up(lg) {
+      @include make-col-ready();
+      @include make-col(5);
+      display: flex;
+      background: {
+        repeat: no-repeat;
+        position-x: right;
+        position-y: bottom;
+        size: auto 100%;
+      }
+    }
+  }
+
+  .contact-form {
+    padding: ($spacer * 3) 0;
+    @include make-col-ready();
+    @include make-col(12);
+    @include media-breakpoint-up(md) {
+      @include make-col(10);
+      @include make-col-offset(1);
+    }
+    @include media-breakpoint-up(lg) {
+      @include make-col(7);
+      @include make-col-offset(0);
+    }
+
+    .contact-button {
+      display: flex;
+      justify-content: flex-start;
+      flex-flow: row-reverse;
+      align-items: center;
+    }
+    textarea {
+      height: 7rem;
+    }
+    .wpcf7-not-valid-tip {
+      font-size: 0.875rem;
+      color: $danger;
+    }
+    .wpcf7-response-output {
+      border: none;
+      padding: ($spacer * 0.5);
+      margin: $spacer 0 0 0;
+      &::before {
+        margin-right: ($spacer * 0.5);
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: "Font Awesome 5 Free";
+      }
+    }
+    .wpcf7-mail-sent-ok {
+      background-color: $success;
+      color: $white;
+      &::before {
+        content: "\f058";
+      }
+    }
+    .wpcf7-validation-errors {
+      background-color: $warning;
+      &::before {
+        content: "\f071";
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      .contact-input-text {
+        width: 66.66%;
+      }
+      .wpcf7 {
+        width: 555px;
+      }
+    }
+  }
+}

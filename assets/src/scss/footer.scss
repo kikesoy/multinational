@@ -1,0 +1,28 @@
+.site-footer {
+  padding-bottom: ($spacer * 3);
+  color: $white;
+  background-color: $multinational-red;
+  @include center-shadow(0.75);
+  a,
+  a:hover {
+    color: inherit;
+  }
+
+  hr {
+    border-top: 1px solid $white;
+    box-sizing: border-box;
+    margin: 0;
+  }
+  &::before {
+    @include border-grad(3px, ($spacer * 3), $gray-500, $gray-200);
+  }
+  .footer-first-row {
+    @include make-row();
+    margin-bottom: ($spacer * 1.5);
+  }
+  .footer-second-row {
+    @include make-row();
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}

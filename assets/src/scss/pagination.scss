@@ -1,0 +1,16 @@
+.pagination {
+  .page-numbers {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #860038;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+  }
+  .current {
+    background: $multinational-red;
+    color: $white;
+  }
+}

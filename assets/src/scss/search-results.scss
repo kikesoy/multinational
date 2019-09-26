@@ -1,0 +1,34 @@
+.search-results {
+  .search-area {
+    margin: ($spacer * 3) 0;
+  }
+  .result-found {
+    padding-bottom: $spacer;
+    margin-bottom: $spacer;
+    border-bottom: 1px solid $gray-400;
+
+    &-link {
+      display: block;
+      padding: $spacer;
+
+      &:hover {
+        text-decoration: none;
+        background: $gray-200;
+      }
+    }
+    &-entry-title {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &-entry-summary {
+      color: $black;
+    }
+  }
+  .search-form {
+    &-container {
+      width: 100%;
+    }
+  }
+}

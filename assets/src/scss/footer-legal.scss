@@ -1,0 +1,29 @@
+.footer-legal {
+  @include make-col-ready();
+  @include make-col(12);
+  @include media-breakpoint-up(md) {
+    @include make-col(6);
+    text-align: left;
+  }
+  text-align: center;
+
+  .menu {
+    @include list-unstyled();
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-transform: uppercase;
+
+    @include media-breakpoint-up(md) {
+      justify-content: start;
+      margin-bottom: 0;
+    }
+
+    li {
+      margin: 0 $spacer;
+      @include media-breakpoint-up(md) {
+        margin-left: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.entry-logo {
+  position: absolute;
+  @include media-breakpoint-up(md) {
+    max-width: 720px;
+  }
+  @include media-breakpoint-up(lg) {
+    max-width: 960px;
+  }
+  @include media-breakpoint-up(xl) {
+    max-width: 1140px;
+  }
+  display: flex;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: ($spacer * -4);
+  &-container {
+    display: flex;
+    @include media-breakpoint-up(md) {
+      width: 83.3333%;
+      justify-content: end;
+    }
+    margin: 0 auto;
+  }
+  &-box {
+    background: $white;
+    display: flex;
+    width: 175px;
+    height: 175px;
+    padding: $spacer;
+    @include border-radius(50%);
+
+    img {
+      @include border-radius(50%);
+      @include center-shadow(0.25);
+      width: 100%;
+      height: auto;
+    }
+  }
+}

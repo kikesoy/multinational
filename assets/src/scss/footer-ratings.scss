@@ -1,0 +1,21 @@
+.footer-ratings {
+  @include make-col-ready();
+  @include make-col(12);
+  @include media-breakpoint-up(md) {
+    @include make-col(6);
+    text-align: right;
+  }
+  text-align: center;
+
+  #text-3 {
+    p {
+      margin-bottom: 0;
+    }
+  }
+  .widget_media_image {
+    .image {
+      max-width: 35% !important;
+      margin-bottom: $spacer;
+    }
+  }
+}

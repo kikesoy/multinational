@@ -1,0 +1,41 @@
+.search-overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  background: rgba($black, 0.7);
+
+  .search-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .search-close {
+      @include border-radius(50%);
+      box-sizing: border-box;
+      align-self: end;
+      width: ($spacer * 2);
+      height: ($spacer * 2);
+      color: $white;
+      line-height: 1;
+      margin-bottom: $spacer;
+      border: 2px solid $white;
+      background: transparent;
+
+      &:hover {
+        background: $white;
+        color: $multinational-red;
+      }
+    }
+    .form-inline {
+      @include center-shadow(0.75);
+      box-sizing: border-box;
+      background: $white;
+      padding: ($spacer * 1.5);
+    }
+  }
+}

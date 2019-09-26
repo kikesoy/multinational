@@ -1,0 +1,54 @@
+.footer-nav {
+  @include make-col-ready();
+  @include media-breakpoint-up(lg) {
+    @include make-col(8);
+  }
+  @include media-breakpoint-up(xl) {
+    @include make-col(8);
+  }
+
+  margin-bottom: ($spacer * 1.5);
+
+  ul {
+    @include list-unstyled();
+    margin-bottom: 0;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row;
+    flex-wrap: wrap;
+
+    li {
+      flex: 50%;
+      line-height: 1;
+      @include media-breakpoint-up(md) {
+        flex: 1;
+        margin-bottom: 0;
+      }
+    }
+    & > li {
+      margin-bottom: $spacer;
+      padding-right: $spacer;
+
+      > a {
+        display: block;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: ($spacer * 2);
+      }
+    }
+  }
+
+  .sub-menu {
+    font-size: 0.875rem;
+    li {
+      margin-bottom: ($spacer / 2);
+    }
+    a {
+      font-weight: normal;
+      text-transform: none;
+    }
+  }
+}

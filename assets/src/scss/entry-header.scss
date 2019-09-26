@@ -1,0 +1,48 @@
+.entry-header {
+  position: relative;
+  max-width: 1500px;
+  padding-top: 3rem;
+  line-height: 1;
+  margin: {
+    top: 0;
+    right: auto;
+    bottom: ($spacer * 5);
+    left: auto;
+  }
+  background: {
+    position-x: center;
+    postion-y: top;
+    repeat: no-repeat;
+    size: cover;
+  }
+  height: 200px;
+  @include media-breakpoint-up(md) {
+    height: 300px;
+  }
+  @include media-breakpoint-up(lg) {
+    height: 400px;
+  }
+  @include media-breakpoint-up(xl) {
+    height: 500px;
+  }
+  .entry-title {
+    color: $multinational-red;
+    line-height: inherit;
+    margin-bottom: ($spacer * 3);
+  }
+  .entry-subtitle {
+    display: none;
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+    line-height: 1;
+  }
+}
+.single-products {
+  .entry-title {
+    display: none;
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+}

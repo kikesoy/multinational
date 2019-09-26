@@ -1,0 +1,29 @@
+.btn-download {
+  display: flex;
+  line-height: 1;
+  justify-content: space-between;
+  align-items: center;
+  background: $multinational-red;
+  border: 1px solid $white;
+  color: $white;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: ($spacer * 0.75);
+
+  i {
+    padding-left: $spacer;
+    margin-left: $spacer;
+    border: none;
+    border-left: 1px solid $white;
+  }
+  &:hover {
+    background-color: $white;
+    color: $multinational-red;
+    text-decoration: none;
+    border-color: $multinational-red;
+
+    i {
+      border-left-color: $multinational-red;
+    }
+  }
+}

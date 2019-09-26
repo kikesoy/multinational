@@ -1,0 +1,81 @@
+.advgb-column-inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+.director-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: ($spacer * 3);
+  @include make-col-ready();
+  @include make-col(12);
+  @include media-breakpoint-up(md) {
+    @include make-col(6);
+  }
+  @include media-breakpoint-up(lg) {
+    @include make-col(4);
+  }
+
+  &-header {
+    position: relative;
+    padding-top: ($spacer * 2);
+    margin-bottom: ($spacer * 3);
+    background: {
+      color: $multinational-red;
+      position: center center;
+      repeat: no-repeat;
+      size: cover;
+    }
+
+    &-title {
+      position: relative;
+      bottom: ($spacer * -3);
+      margin: {
+        right: auto;
+        left: auto;
+      }
+      box-sizing: content-box;
+      @include border-radius(50%);
+      background-color: $white;
+      color: $multinational-red;
+      font-size: 48px;
+      line-height: 100px;
+      height: 100px;
+      width: 100px;
+      border: ($spacer * 0.5) solid $multinational-red;
+    }
+  }
+
+  &-id {
+    line-height: 1;
+    font-weight: bold;
+    padding: ($spacer * 2);
+    padding-bottom: 0;
+    &-name {
+      line-height: inherit;
+      font-weight: inherit;
+    }
+    &-position {
+      line-height: inherit;
+      font-weight: inherit;
+      color: $multinational-red;
+    }
+  }
+
+  &-resume {
+    flex: 1 0 auto;
+    padding: ($spacer * 2);
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    background: $white;
+    @include center-shadow(0.25);
+  }
+  p,
+  h6 {
+    margin-bottom: 0;
+  }
+}
