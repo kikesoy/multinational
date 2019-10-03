@@ -13,17 +13,14 @@
 		<div class="row">
 			<div class="col-md-4 offset-md-1">
 				<?php
-					if ( is_singular() ) {
+					if ( is_singular() ) :
 						the_title( '<h1 class="entry-title">', '</h1>' ); 
-							if ( get_post_meta( $post->ID, 'subtitle', true ) ) {
-								echo '<h5 class="entry-subtitle">'.get_post_meta( $post->ID, 'subtitle', true ).'</h5>';
-							} else {
-								echo '<h5 class="entry-subtitle">'.get_the_excerpt().'</h5>';
-							}
-					}
-					else {
+						if (has_excerpt()):
+							echo '<h5 class="entry-subtitle">'.get_the_excerpt().'</h5>';
+						endif;
+					else :
 						the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );	
-					}?>
+					endif; ?>
 					
 			</div><!-- .col-md-5-->
 		</div><!-- .row -->

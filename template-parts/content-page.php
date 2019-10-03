@@ -14,9 +14,10 @@
 			<div class="col-md-5 offset-md-1">
 				<?php 
 				the_title( '<h1 class="entry-title">', '</h1>' ); 
-				if ( get_post_meta( $post->ID, 'subtitle', true ) ) {
-					echo '<h5 class="entry-subtitle">'.get_post_meta( $post->ID, 'subtitle', true ).'</h5>';
-				} ?>
+				if (has_excerpt()):
+					echo '<h5 class="entry-subtitle">'.get_the_excerpt().'</h5>';
+				endif;
+				?>
 			</div>
 		</div>
 	</div>
