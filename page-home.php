@@ -85,7 +85,7 @@ get_header();
                       <?php the_excerpt(); ?>
                     </section>
                     <footer class="post-footer">
-                      <a href="<?php echo get_permalink(); ?>" class="btn btn-primary">Ver mas</a>
+                      <a href="<?php echo get_permalink(); ?>" class="btn btn-primary"><?php _e('Ver más','multinational'); ?></a>
                     </footer>
                     
                   </div>
